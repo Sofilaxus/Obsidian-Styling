@@ -1,0 +1,238 @@
+/**
+
+
+Well.
+
+
+**/
+
+/**-------------------**
+| THEME STYLING        
+**--------------------**/
+
+.theme-dark {
+    --background-primary: #0c0f14;
+    --background-secondary: #141a24;
+    --text-normal: #b5e0ff;
+    --bold-color: #9198e5;
+    --text-highlight-bg: rgba(207, 167, 255, 0.347);
+    --text-title-h1: #2cdcff;
+    --text-title-h2: #e0afff;
+    --text-title-h3: #4cb7ff;
+    --text-title-h4: #dd92ff;
+    --text-title-h5: #7c9dff;
+
+}
+  
+.theme-light {
+    --background-primary: #ECE4FF;
+    --background-secondary: #D9C9FF;
+}
+
+/**-------------------**
+| HIGHLIGHTING STYLES
+**--------------------**/
+
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  background-image: none !important;
+  background-color: var(--text-highlight-bg);
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  -webkit-background-clip: initial;
+}
+
+/**-------------------**
+| ITALIC STYLING
+**--------------------**/
+
+.cm-em,
+em {
+  color: #0099ff !important;
+  font-family: OperatorMonoSSmLig-Book, Rubik, var(--default-font) !important;
+}
+
+.cm-em.cm-formatting-em {
+  display: inline-flex;
+  width: 0.45rem;
+  vertical-align: text-top;
+}
+
+/**-------------------**
+| HEADING STYLES
+**--------------------**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--default-font);
+  font-weight: 600;
+}
+
+.HyperMD-header.HyperMD-header-1,
+.HyperMD-header.HyperMD-header-2,
+.HyperMD-header.HyperMD-header-3,
+.HyperMD-header.HyperMD-header-4,
+.HyperMD-header.HyperMD-header-5,
+.HyperMD-header.HyperMD-header-6 {
+  border-bottom: 1px solid;
+  border-width: 1px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #82e6ff, #3c6aea, #0b0e12, #0b0e12, #0b0e12);
+}
+
+.HyperMD-header {
+  padding: 20px;
+}
+
+.markdown-preview-section h1,
+.cm-header-1 {
+  color: var(--text-title-h1);
+}
+
+.markdown-preview-section h2,
+.cm-header-2 {
+  color: var(--text-title-h2);
+}
+
+.markdown-preview-section h3,
+.cm-header-3 {
+  color: var(--text-title-h3);
+}
+
+.markdown-preview-section h4,
+.cm-header-4 {
+  color: var(--text-title-h4);
+}
+
+.markdown-preview-section h5,
+.cm-header-5 {
+  color: var(--text-title-h5);
+}
+
+.markdown-preview-section h6,
+.cm-header-6 {
+  color: var(--text-title-h5);
+}
+
+/** headings */
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  /* padding-top: 1.25rem; */
+  margin: 45px 0 20px 0;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-width: 35%;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, var(--text-sub-accent));
+}
+
+.view-header-icon {
+  color: var(--text-accent);
+}
+
+/** Adding different # colors **/
+
+.cm-formatting.cm-formatting-header.cm-header {
+  color: var(--text-accent);
+  opacity: 0.45;
+}
+
+/**-------------------**
+| FOLDER NAVIGATION
+**--------------------**/
+
+.nav-folder .nav-folder-title-content:before {
+    content: "\✧"; /* open folder character  */
+    padding-right: 8px;
+  }
+  
+  .nav-folder.is-collapsed .nav-folder-title-content:before {
+    content: "\✦" ;    
+    padding-right: 8px;
+  }
+  
+  .nav-file-title-content:before {
+    content: "\⋆";
+    padding-right: 8px;
+  }
+
+  /**-------------------**
+| BLOCKQUOTE STYLING
+**--------------------**/
+
+/* Remove blockquote left margin */
+blockquote {
+    margin-inline-start: 0;
+  }
+  
+  /* blockquote style overwrite */
+  
+  .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote,
+  .markdown-preview-view blockquote {
+    position: relative;
+    padding: 1rem 2rem 1rem 3rem;
+    color: #88d7ff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 2em;
+    margin-right: 0 !important;
+    border-left: 3px rgba(34, 218, 255, 0.84) solid;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+    background: linear-gradient(135deg, rgba(50, 43, 67, 0.45), #0e1217);
+  }
+  
+  .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote::before,
+  .markdown-preview-view blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 2px;
+    width: 60%;
+    background: linear-gradient(90deg, rgba(13, 185, 215, 0.5), #13111a);
+  }
+  
+  .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote + .HyperMD-quote::before {
+    display: none;
+  }
+  
+  .HyperMD-quote::after,
+  .markdown-preview-view blockquote::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 2px;
+    width: 25%;
+    background: linear-gradient(90deg, rgba(13, 185, 215, 0.5), #15131c);
+  }
+  
+  .HyperMD-quote.HyperMD-quote-2::before,
+  .HyperMD-quote.HyperMD-quote-3::before,
+  .HyperMD-quote.HyperMD-quote-4::before,
+  .HyperMD-quote.HyperMD-quote-5::before {
+    height: 0;
+  }
+  
+  .markdown-preview-view blockquote p {
+    position: relative;
+  }
+  
+  .markdown-preview-view blockquote p:first-of-type::before {
+    content: '!!';
+    font-style: italic;
+    font-weight: 700;
+    color: var(--text-accent);
+    position: absolute;
+    top: 0.1rem;
+    left: -1.8rem;
+  }
